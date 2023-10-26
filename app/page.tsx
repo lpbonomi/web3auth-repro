@@ -1,9 +1,7 @@
 "use client";
 
 import { Web3Auth } from "@web3auth/modal";
-import { CHAIN_NAMESPACES, WALLET_ADAPTERS, IProvider } from "@web3auth/base";
-import { OpenloginAdapter } from "@web3auth/openlogin-adapter";
-import { SolanaPrivateKeyProvider } from "@web3auth/solana-provider";
+import { CHAIN_NAMESPACES, IProvider } from "@web3auth/base";
 import { useEffect, useState } from "react";
 
 const Web3authButtons = () => {
