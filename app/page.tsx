@@ -29,28 +29,6 @@ const Web3authButtons = () => {
           },
         });
 
-        const privateKeyProvider = new SolanaPrivateKeyProvider({
-          config: {
-            chainConfig: {
-              chainId: "0x3",
-              rpcTarget: "https://api.devnet.solana.com",
-              displayName: "Solana",
-              blockExplorer: "https://explorer.solana.com",
-              ticker: "SOL",
-              tickerName: "Solana",
-            },
-          },
-        });
-
-        const openloginAdapter = new OpenloginAdapter({
-          privateKeyProvider,
-          adapterSettings: {
-            uxMode: "redirect",
-          },
-        });
-
-        web3authInstance.configureAdapter(openloginAdapter);
-
         setWeb3auth(web3authInstance);
 
         await web3authInstance.initModal();
